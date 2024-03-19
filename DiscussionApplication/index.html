@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Discussion Portal</title>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar" style="background-color: #008080; color: white">
+        <div  class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Discussion Portal</span>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-lg-5 col-sm-12 auto border1">
+          <nav class="navbar border2" style="background-color: #ffffff; color: white">
+            <div class="d-flex p-2">
+              <button id="home-buttion"  type="button" class="btn btn-primary mx-2">
+                New Question form
+              </button>
+              <div class="form">
+                <input
+                  id="Regular"
+                  class="form-control me-2 mx-2"
+                  type="search"
+                  placeholder="Search Question....."
+                  aria-label="Search"
+                  oninput="FormChange(this.value)"
+                />
+              </div>
+            </div>
+          </nav>
+          <div  id="userQuestion">
+
+          </div>
+        </div>
+        <div class="col-lg-7 col-sm-12 auto" id="nonPortalPage">
+          <div class="form p-3 m-3">
+            <div class="heading">
+              <h1>Welcome to discussion portal!</h1>
+              <p>Enter a subject and question to get started</p>
+              <input class="form-control" type="text" id="subjectName" name="subjectName" placeholder="subject"/>
+              <br>
+              <textarea class="form-control" name="question" id="question" cols="60" rows="8" placeholder="question"></textarea>
+              <br>
+              <button class="btn btn-primary" id="question-submitform">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-sm-12 auto" id="PortalPage" style="display: none;">
+          <h4 class="mx-1 my-1" style="color: grey;">Question</h4>
+          <div id="question-board" class="position-relative m-4 p-2">
+           </div>
+          <h4 class="mx-1 my-1" style="color: grey;">Response</h4>
+          <div id="respone-board" class="m-4 p-2">
+         </div>
+          <div id="form-board">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+<style>
+  .border1 {
+    border-right: 2px solid grey;
+  }
+  .border2{
+    border-bottom: 2px solid grey;
+  }
+</style>
